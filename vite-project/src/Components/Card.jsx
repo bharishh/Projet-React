@@ -1,35 +1,26 @@
 import "./Components.css"
-import logo_Montagne from '../assets/montagne.jpg'
-import logo_Koala from '../assets/koala.jpg'
+import React from "react";
 
+function Card() {
+  const card = [
+    { id: 1, title: "Nature", image: "/assets/montagne.jpg" }
+    , { id: 2, title: "Animaux", image: "/assets/koala.jpg" }
+    , { id: 3, title: "Voiture", image: "/assets/Lambo_yakuza.jpg" }
+  ];
 
-function card()
-{
-            const card = [
-            { title: "Nature", image: logo_Montagne},
-            {title: "Animaux", image: logo_Koala}
-            ];
-
-    return(
-        <div>
-            {card.map((item) =>
-            (
-                <>
-                <section><h2>{item.title}</h2></section>
-                
-                    <div className="card">
-                <img src={item.image} alt={item.title} />
-                </div>
-                </>
-            
-
-            ))}
+  return (
+    <section>
+      {card.map((item) => (
+        <div key={item.id}>
+          <h2>{item.title}</h2>
+                <img src={item.image} alt={item.title} className="card" />
         </div>
-    );
-           
+      ))}
+    </section>
+  );
 }
 
-export default card;
+export default Card;
 
 
 
