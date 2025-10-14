@@ -1,12 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
 import App from './App.jsx'
-import Like from './Components/Like.jsx'
+import Card from './Components/Card.jsx'
+import logo from './assets/montagne.jpg'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <Like/>
+    <Card  title ="Nature " image = {logo}/>
+    <Card  image = {logo}/>
+
   </StrictMode>,
 )
