@@ -5,8 +5,8 @@ function App() {
     
     return (
         <div>
-            <h1>Galerie d'image</h1>
-             </div>
+            
+        </div>
     )
 }
 
