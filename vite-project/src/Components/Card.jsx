@@ -1,5 +1,6 @@
 import "./Components.css"
 import React from "react";
+import Like from "./Like.jsx";
 
 function Card() {
   const card = [
@@ -31,9 +32,13 @@ function Card() {
           <h2 className="category-title">{title}</h2>
           <div className="image">
             {images.map((img, index) => (
-              <img key={index} src={img} alt={title} className="card" />
-            ))}
+  <div key={index} className="card-container">
+    <img src={img} alt={title} className="card" />
+    <Like />
+  </div>
+))}
           </div>
+          
         </div>
       ))}
     </section>
